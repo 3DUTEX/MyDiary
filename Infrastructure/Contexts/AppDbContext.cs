@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Contexts;
 
-public class PostgresDbContext : DbContext
+public class AppDbContext : DbContext
 {
-    public PostgresDbContext()
+    public AppDbContext()
     {
         DotNetEnv.Env.TraversePath().Load();
     }

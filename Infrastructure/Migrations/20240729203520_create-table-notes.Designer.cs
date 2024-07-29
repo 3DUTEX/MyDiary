@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Infrastructure.Migrations
 {
-    [DbContext(typeof(PostgresDbContext))]
+    [DbContext(typeof(AppDbContext))]
     [Migration("20240729203520_create-table-notes")]
     partial class createtablenotes
     {
