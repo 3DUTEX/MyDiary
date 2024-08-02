@@ -19,5 +19,14 @@ public class AppDbContext : DbContext
         options.UseNpgsql(connectionstring);
     }
 
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        builder.Entity<User>(entity =>
+        {
+            entity.HasIndex(property => property.Email).IsUnique();
+        });
+    }
+
     public DbSet<Note> Notes { get; set; }
+    public DbSet<User> Users { get; set; }
 }

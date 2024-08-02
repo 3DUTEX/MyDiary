@@ -2,13 +2,14 @@ using Domain.DTOs.Notes;
 using Domain.Entities;
 using Domain.Repositories;
 using Domain.Repositories.Configs;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class NotesController : ControllerBase
 {
     private readonly INotesRepository _notesRepository;
