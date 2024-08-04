@@ -10,6 +10,8 @@ public class AESEncryptionTests
 
     public AESEncryptionTests(ITestOutputHelper logger)
     {
+        DotNetEnv.Env.TraversePath().Load();
+
         _logger = logger;
     }
 
