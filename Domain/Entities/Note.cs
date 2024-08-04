@@ -6,4 +6,6 @@ public class Note
     public string Title { get; set; } = string.Empty;
     public string Content { get; set; } = string.Empty;
     public DateTime CreatedIn { get; set; } = DateTime.UtcNow;
+    public int CreatedById { get; set; }
+    public User CreatedBy { get; set; } = new();
 }
